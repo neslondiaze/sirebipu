@@ -5,5 +5,5 @@ require('./database')
 
 
   app.listen(process.env.PORT, () =>
-    console.log(`¡Aplicación escuchando en el puerto ${process.env.PORT}!`)
+    console.log(`¡Escuchando en el puerto ${process.env.PORT} !`)
   );

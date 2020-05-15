@@ -1,26 +1,33 @@
 const express = require('express');
+const path = require('path');
 
-// Inicializacion 
+//TODO: Inicializacion 
 const app = express();
 
 
-// Configuracion
+//TODO:Configuracion
 app.set('port', process.env.PORT || 4000);
+app.set('views', path.join(__dirname, 'views'));
 
 
-// Middelawares
+//TODO: Middelawares
+app.use(express.urlencoded({extended: false}));
 
 
-
-// Variables globales
-
-
-
-// Routes
+//TODO: Variables globales
 
 
 
+//TODO: Routes
+app.get('/', (req, res) => {
+    res.send('Hola estoy corriendo');
+});
 
-// Archivos Estaticos
+
+
+//TODO: Archivos Estaticos
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 module.exports = app;
