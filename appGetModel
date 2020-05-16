@@ -11,3 +11,17 @@ app.get("/libros", function(req, res) {
     });
 
 });
+
+//TODO: modelo para la verificacion de roles
+router.get('/',function(req,res,next){
+                   // OBTENER ROL DEL USUARIO QUE PRETENDE ACCEDER
+                   // SI EL USUARIO TIENE EL ROL NECESARIO
+                       next();
+                   // SI NO
+                      let error = new Error("No autorizado");
+                      next(error);
+               }, function(req,res,next){
+
+                    // HACER LO QUE PROCEDA EN EL ENDPOINT
+
+                  }
