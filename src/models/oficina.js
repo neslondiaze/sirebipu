@@ -3,8 +3,8 @@ const { Schema, model } = require("mongoose");
 //TODO: Shema de responsable de oficvina
 const OficinaSchema = new Schema(
   {
-    ofiname: { type: String, required: true },
-    ofinumb: { type: String, requerid: true, unique: true}
+    oficname: { type: String, required: true },
+    oficnumb: { type: String, requerid: true, unique: true}
   },
   {
     timestamps: true,

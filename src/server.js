@@ -32,6 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 //TODO: Routes
 app.use(require("./routes/index.routes"));
 app.use(require("./routes/muebles.routes"));
+app.use(require("./routes/responzables.routes"));
 
 //TODO: Archivos Estaticos
 app.use(express.static(path.join(__dirname, "public")));
