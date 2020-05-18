@@ -1,17 +1,18 @@
 const { Schema, model } = require("mongoose");
+const Double = require('@mongoosejs/double');
 
 //TODO: Shema de BM-1 Inventario Inicial de Bienes Muebles
 const BM1Schema = new Schema(
   {
-    empresa: { type: String, requerid: true },
-    acta: { type: String, requerid: true, unique: true },
-    recepcion: { type: String, requerid: true},
-    ubicacion: { type: String, requerid: true },
-    cantidad: { type: String, requerid: true },
-    codigo: { type: String, required: true, unique: true },
-    descripcion: { type: String, requerid: true },
-    bsvalor: { type: Number, requerid: true },
-    imagen: { type: Schema.ObjectId, ref: "fotobm1" },
+    empresa1: { type: String, requerid: true },
+    acta1: { type: String, requerid: true, unique: true },
+    recepcion1: { type: String, requerid: true},
+    ubicacion1: { type: String, requerid: true },
+    cantidad1: { type: String, requerid: true },
+    codigo1: { type: String, required: true, unique: true },
+    descripcion1: { type: String, requerid: true },
+    bsvalor1: { type: Double, requerid: true },
+    fotobm1: { type: Schema.ObjectId, ref: "fotobm1" },
     
   },
   {
